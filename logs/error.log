@@ -1,0 +1,17 @@
+2024/05/17 16:46:46 [error] 92592#92660: *1 CreateFile() "C:\workSpace-MSPR_KAWA\MSPR_KAWA_NGINX\testLCB\nginx-1.26.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8082", referrer: "http://localhost:8082/kawa_clients/customers"
+2024/05/17 16:50:07 [error] 92592#92660: *4 CreateFile() "C:\workSpace-MSPR_KAWA\MSPR_KAWA_NGINX\testLCB\nginx-1.26.0/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8082", referrer: "http://localhost:8082/"
+2024/05/18 22:42:08 [emerg] 14664#42392: no "events" section in configuration
+2024/05/18 22:42:21 [emerg] 71996#69604: no "events" section in configuration
+2024/05/18 22:42:45 [emerg] 19420#3448: no "events" section in configuration
+2024/05/18 22:42:54 [emerg] 39604#22168: no "events" section in configuration
+2024/05/18 22:46:07 [emerg] 88168#90288: no "events" section in configuration
+2024/05/18 22:46:11 [emerg] 93688#34312: no "events" section in configuration
+2024/05/18 22:46:19 [emerg] 92476#73860: no "events" section in configuration
+2024/05/18 22:47:17 [emerg] 95792#93716: no "events" section in configuration
+2024/05/18 22:47:53 [emerg] 96020#96288: no "events" section in configuration
+2024/05/18 22:48:03 [emerg] 94752#101288: no "events" section in configuration
+2024/05/18 22:48:07 [emerg] 27688#31968: no "events" section in configuration
+2024/05/18 22:57:32 [emerg] 77644#16108: no "events" section in configuration
+2024/05/18 22:57:37 [emerg] 75316#26732: no "events" section in configuration
+2024/05/18 22:57:41 [emerg] 101484#34392: no "events" section in configuration
+2024/05/19 23:59:23 [error] 20316#4860: *5 CreateFile() "C:\workSpace-MSPR_KAWA\MSPR_KAWA_NGINX/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8082", referrer: "http://localhost:8082/"
