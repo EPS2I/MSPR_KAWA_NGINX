@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker-compose --rm -it -p mspr-kawa-services up -d
+docker-compose -p mspr-kawa-services up -d
 
 echo ""
 echo ""
