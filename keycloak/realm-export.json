@@ -1,0 +1,215 @@
+{
+  "id": "MSPR_KAWA",
+  "realm": "MSPR_KAWA",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "REALM_ADMIN",
+        "description": "Realm admin role",
+        "composite": true,
+        "composites": {
+          "client": {
+            "client_mspr_kawa": [
+              "CLIENT_ADMIN"
+            ]
+          }
+        },
+        "clientRole": false
+      },
+      {
+        "name": "REALM_PUBLIC",
+        "description": "Realm user role",
+        "composite": true,
+        "composites": {
+          "client": {
+            "client_mspr_kawa": [
+              "CLIENT_PUBLIC"
+            ]
+          }
+        },
+        "clientRole": false
+      }
+    ],
+    "client": {
+      "client_mspr_kawa": [
+        {
+          "name": "CLIENT_ADMIN",
+          "description": "Administrator role"
+        },
+        {
+          "name": "CLIENT_PUBLIC",
+          "description": "Public role"
+        }
+      ]
+    }
+  },
+  "requiredCredentials": [
+    "password"
+  ],
+  "clients": [
+    {
+      "clientId": "client_mspr_kawa",
+      "name": "",
+      "description": "",
+      "rootUrl": "http://localhost:8081",
+      "adminUrl": "http://localhost:8081",
+      "baseUrl": "http://localhost:8081",
+      "surrogateAuthRequired": false,
+      "enabled": true,
+      "alwaysDisplayInConsole": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "q7SDoWQ3EmSQUGYHPPGoYXf9ZgCGZtjM",
+      "redirectUris": [
+        "http://localhost:8080/*",
+        "http://localhost:8082/*",
+        "http://localhost:8078/*",
+        "http://localhost:8077/*",
+        "http://localhost:8079/*"
+      ],
+      "webOrigins": [
+        "http://localhost:8080/*",
+        "http://localhost:8082/*",
+        "http://localhost:8078/*",
+        "http://localhost:8077/*",
+        "http://localhost:8079/*"
+      ],
+      "notBefore": 0,
+      "bearerOnly": false,
+      "consentRequired": false,
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "publicClient": false,
+      "frontchannelLogout": true,
+      "protocol": "openid-connect",
+      "attributes": {
+        "post.logout.redirect.uris": "http://localhost:8080/*##http://localhost:8079/*##http://localhost:8078/*##http://localhost:8082/*",
+        "oauth2.device.authorization.grant.enabled": "false",
+        "backchannel.logout.revoke.offline.tokens": "false",
+        "use.refresh.tokens": "true",
+        "oidc.ciba.grant.enabled": "false",
+        "client.use.lightweight.access.token.enabled": "false",
+        "backchannel.logout.session.required": "true",
+        "client_credentials.use_refresh_token": "false",
+        "tls.client.certificate.bound.access.tokens": "false",
+        "require.pushed.authorization.requests": "false",
+        "acr.loa.map": "{}",
+        "display.on.consent.screen": "false",
+        "token.response.type.bearer.lower-case": "false"
+      },
+      "authenticationFlowBindingOverrides": {},
+      "fullScopeAllowed": true,
+      "nodeReRegistrationTimeout": -1,
+      "protocolMappers": [
+        {
+          "id": "f6309e8a-7306-484b-ba49-22ab3d2fda44",
+          "name": "Client IP Address",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientAddress",
+            "introspection.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientAddress",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "90784bb5-598e-414a-9719-9d2d087b9063",
+          "name": "Client Host",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "clientHost",
+            "introspection.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "clientHost",
+            "jsonType.label": "String"
+          }
+        },
+        {
+          "id": "6697f675-0756-4b9e-ba9b-1a3f7e90bde8",
+          "name": "Client ID",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usersessionmodel-note-mapper",
+          "consentRequired": false,
+          "config": {
+            "user.session.note": "client_id",
+            "introspection.token.claim": "true",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "client_id",
+            "jsonType.label": "String"
+          }
+        }
+      ],
+      "defaultClientScopes": [
+        "web-origins",
+        "acr",
+        "profile",
+        "roles",
+        "email"
+      ],
+      "optionalClientScopes": [
+        "address",
+        "phone",
+        "offline_access",
+        "microprofile-jwt"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "user_admin",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Admin",
+      "lastName": "User",
+      "email": "admin@example.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "useradmin",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "REALM_ADMIN"
+      ],
+      "clientRoles": {
+        "client_mspr_kawa": [
+          "CLIENT_ADMIN"
+        ]
+      }
+    },
+    {
+      "username": "user_public",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Public",
+      "lastName": "User",
+      "email": "public@example.com",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "userpublic",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "REALM_PUBLIC"
+      ],
+      "clientRoles": {
+        "client_mspr_kawa": [
+          "CLIENT_PUBLIC"
+        ]
+      }
+    }
+  ]
+}

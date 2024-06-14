@@ -1,19 +1,29 @@
 #!/bin/bash
 
-# Supprimer le conteneur existant, s'il existe
-#echo "Suppression du conteneur existant..."
-#docker rm -f mspr-kawa-nginx || true
+docker rm -f mspr-kawa-nginx || true &
+docker rm -f mspr-kawa-rabbitmq || true &
+wait
 
-# Supprimer l'image existante, s'il existe
-echo "Suppression de l'image existante..."
-docker rmi -f mspr-kawa-nginx || true
+docker rmi -f mspr-kawa-nginx || true &
+docker rmi -f mspr-kawa-rabbitmq || true &
+wait
 
-# Construire l'image Docker
-echo "Construction de l'image Docker..."
-docker build -t mspr-kawa-nginx .
+docker build -t mspr-kawa-nginx . &
+docker build -t mspr-kawa-rabbitmq ./rabbitMQ/. &
+wait
 
-# Lancer le conteneur
-#echo "Lancement du conteneur..."
-#docker run --name mspr-kawa-nginx -d -p 8082:8082 mspr-kawa-nginx
+echo ""
+echo ""
+echo "image nginx rabbitMQ              | OK |"
+echo ""
+echo ""
 
-#echo "Déploiement terminé avec succès."
+#docker run --name mspr-kawa-nginx -d -p 8082:8082 mspr-kawa-nginx &
+#wait
+#gs
+#
+#echo ""
+#echo ""
+#echo "Containre nginx rabbitMQ              | OK |"
+#echo ""
+#echo ""
