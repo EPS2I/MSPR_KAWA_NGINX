@@ -1,0 +1,12 @@
+FROM quay.io/keycloak/keycloak:24.0.4
+
+COPY ./realm-export.json /opt/keycloak/data/import/realm-export.json
+
+ENV KEYCLOAK_IMPORT /opt/keycloak/data/import/realm-export.json
+
+EXPOSE 8081
+
+ENV KEYCLOAK_ADMIN=adminkeycloak
+ENV KEYCLOAK_ADMIN_PASSWORD=adminkeycloak
+
+CMD ["start-dev", "--http-port=8081", "--import-realm"]
