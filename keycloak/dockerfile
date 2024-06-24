@@ -9,4 +9,4 @@ EXPOSE 8081
 ENV KEYCLOAK_ADMIN=adminkeycloak
 ENV KEYCLOAK_ADMIN_PASSWORD=adminkeycloak
 
-CMD ["start-dev", "--http-port=8081", "--import-realm"]
+CMD ["start-dev", "--http-port=8081", "--import-realm", "--optimized"]

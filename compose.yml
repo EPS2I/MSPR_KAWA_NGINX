@@ -29,49 +29,8 @@ services:
 
   mspr-kawa-rabbitmq:
     build: ./rabbitMQ/.
-    image: mspr-kawwa-rabbitmq
-    container_name: mspr-kawwa-rabbitmq
+    image: mspr-kawa-rabbitmq
+    container_name: mspr-kawa-rabbitmq
     ports:
       - "15672:15672"
       - "5672:5672"
-#
-#  mspr-kawa-clients:
-#    image: mspr-kawa-clients
-#    container_name: mspr-kawa-clients
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=prod
-#    ports:
-#      - "8080:8080"
-#    networks:
-#      - mspr-kawa-network
-#    depends_on:
-#      mspr-kawa-db:
-#        condition: service_started
-#
-##  mspr-kawa-orders:
-##    image: mspr-kawa-orders
-##    container_name: mspr-kawa-orders
-##    ports:
-##      - "8079:8079"
-##    networks:
-##      - mspr-kawa-network
-#
-##  mspr-kawa-products:
-##    image: mspr-kawa-products
-##    container_name: mspr-kawa-products
-##    ports:
-##      - "8078:8078
-##    networks:
-##      - mspr-kawa-network
-#
-#  mspr-kawa-db:
-#    image: mspr-kawa-db
-#    container_name: mspr-kawa-db
-#    environment:
-#      - SPRING_PROFILES_ACTIVE=prod
-#    ports:
-#      - "8077:8077"
-#    networks:
-#      - mspr-kawa-network
-#    depends_on:
-#      - mspr-kawa-postgresql

@@ -1,9 +1,11 @@
 #!/bin/bash
 
+./dockerBuildRun.sh
+
 docker-compose -p mspr-kawa-services up -d
 
 echo ""
 echo ""
-echo "Containre nginx rabbitMQ              | OK |"
+echo "Service Paye Ton KAWA up              | OK |"
 echo ""
 echo ""
