@@ -12,6 +12,13 @@ docker rmi -f mspr-kawa-keycloak || true &
 docker rmi -f postgresql || true &
 wait
 
+
+echo ""
+echo ""
+echo "Image & container nginx rabbitMQ keycloak and postresql(local) down and remove             | OK |"
+echo ""
+echo ""
+
 docker build -t mspr-kawa-nginx . &
 docker build -t mspr-kawa-rabbitmq ./rabbitMQ/. &
 docker build -t mspr-kawa-keycloak ./keycloak/. &
@@ -20,7 +27,7 @@ wait
 
 echo ""
 echo ""
-echo "image nginx rabbitMQ              | OK |"
+echo "Image nginx rabbitMQ keycloak and postresql(local)             | OK |"
 echo ""
 echo ""
 
@@ -29,10 +36,10 @@ echo ""
 #docker run --name mspr-kawa-keycloak -d -p 8081:8081 mspr-kawa-keycloak &
 #docker run --name postgresql -d -p 5432:5432 postgresql &
 #wait
-#
-#
+
+
 #echo ""
 #echo ""
-#echo "Containre nginx rabbitMQ              | OK |"
+#echo "Container nginx rabbitMQ keycloak and postresql(local)              | OK |"
 #echo ""
 #echo ""
